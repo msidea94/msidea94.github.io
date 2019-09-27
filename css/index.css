@@ -1,6 +1,6 @@
 body{background: #f5f5f5;}
 header{border-bottom: 1px solid #c4c4c4;}
-.nav{width:1400px;height: 80px;margin:0 auto;box-sizing: border-box;}
+.nav{width:1320px;height: 80px;margin:0 auto;box-sizing: border-box;}
 .nav:before{display:block;clear: both;content: "";}
 .nav .logo{float: left;}
 .nav .gnb{float: right;}
@@ -11,6 +11,17 @@ header{border-bottom: 1px solid #c4c4c4;}
 .nav .gnb li a:before{position:absolute;left: 50%;top:58px;width: 0;height: 2px;background: #651fff;transition: .5s;content: "";}
 .nav .gnb li:hover a:before{width: 100%;height: 2px;left: 0;}
 .nav .gnb li.on a:before{width: 100%;height: 2px;left: 0;}
+
+/* fixed contents */
+.fixed-con .go-top{overflow:hidden;position: fixed; bottom:40px;right: 40px;width:40px;height: 40px;border-radius: 100%;background:#fff;box-shadow: 2px 2px 4px rgba(0,0,0,.5);}
+.fixed-con .go-top a{display:block;text-align:center;line-height: 42px; font-size: 12px;font-weight: bold; font-family: 'Roboto', sans-serif;}
+.fixed-con .go-top:hover a{background:#651fff;color: #fff; }
+.fixed-con .grid-btn{overflow:hidden;position: fixed;display:flex;bottom:100px;right: 30px;width:60px;height: 60px;border-radius: 100%;background:#fff;box-shadow: 2px 2px 4px rgba(0,0,0,.5);align-items: center;justify-content: center;white-space: nowrap;cursor: pointer;}
+.fixed-con .grid-btn a{display:block;text-align:center;font-size: 12px;font-weight: bold; font-family: 'Roboto', sans-serif;}
+.fixed-con .grid-btn.on,
+.fixed-con .grid-btn:hover{background:#651fff; }
+.fixed-con .grid-btn.on a,
+.fixed-con .grid-btn:hover a{color: #fff;}
 
 /* project absolute-tab */
 .tab{padding : 260px 0 200px;text-align: center;}
@@ -24,3 +35,9 @@ header{border-bottom: 1px solid #c4c4c4;}
 .tab-con .text{padding: 40px 0;}
 .tab-con .text h2{font-size:20px;line-height:28px;font-family: 'Roboto', sans-serif;}
 .tab-con .text p{font-size: 16px;line-height: 26px;}
+.tab-con .img{position: relative;display: inline-block;}
+.tab-con .img:before{display:none;position: absolute;left: 0;top: 0;width:100%;height: 100%; opacity:.5;content: "";}
+.tab-con .desktop .img:before{background: url(../img/bg-grid-guid-desktop.png) no-repeat 0 0;}
+.tab-con .tablet .img:before{background: url(../img/bg-grid-guid-tablet.png) no-repeat 0 0;}
+.tab-con .mobile .img:before{background: url(../img/bg-grid-guid-mobile.png) no-repeat 0 0;}
+.tab-con .img.on:before{display: block;}
