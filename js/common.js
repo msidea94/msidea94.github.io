@@ -93,11 +93,11 @@ function  Common() {
         var tabList01 = $('.tab-container.type01 .tab-list-group>li>a');
         var tabList02 = $('.tab-container.type02 .tab-list-group>li>a');
         var tabList03 = $('.tab-container.type03 .tab-list-group>li>a');
-        var tabList03 = $('.tab-container.type04 .tab-list-group>li>a');
+        var tabList04 = $('.tab-container.type04 .tab-list-group>li>a');
         var tabContent01 = $('.tab-container.type01 .tab-contents-group>div')
         var tabContent02 = $('.tab-container.type02 .tab-contents-group>div')
         var tabContent03 = $('.tab-container.type03 .tab-contents-group>div')
-        var tabContent03 = $('.tab-container.type04 .tab-contents-group>div')
+        var tabContent04 = $('.tab-container.type04 .tab-contents-group>div')
         globarTab(tabList01,tabContent01);
         globarTab(tabList02,tabContent02);
         globarTab(tabList03,tabContent03);
