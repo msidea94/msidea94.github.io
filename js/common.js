@@ -128,6 +128,7 @@ function  Common() {
     }
 
 
+
     _this.init = function() {
         _this.tab();
         _this.goTop();

@@ -2,7 +2,7 @@
 
 body{background: #f5f5f5;}
 header{border-bottom: 1px solid #c4c4c4;}
-.nav{width:1400px;height: 80px;margin:0 auto;box-sizing: border-box;}
+.nav{height: 80px;padding: 0 115px 0;box-sizing: border-box;}
 .nav:before{display:block;clear: both;content: "";}
 .nav .logo{float: left;}
 .nav .gnb{float: right;}
@@ -282,7 +282,7 @@ input:focus { border: 1px solid #ec6a1d;}
 .popup-order-content .search-adress .popup-order-search-wrapper{display: flex;}
 .popup-order-content .search-adress .popup-order-search-wrapper>div{flex:1;}
 .popup-order-content .search-adress .popup-order-search-wrapper>div.search-btn{flex: none;width: 100px;}
-.popup-order-content .search-adress .search-txt{padding-top: 12px;}
+.popup-order-content .search-adress .search-txt{padding-top: 12px;cursor: pointer;}
 .popup-order-content .search-adress .search-txt p{color: #ec6a1d;}
 .popup-order-content .search-adress .search-txt span{color: #b2b2b2;}
 /* search-ex */
