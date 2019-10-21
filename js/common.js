@@ -126,8 +126,63 @@ function  Common() {
         popupButton.removeClass('on');
       });
     }
+    _this.dab = function() {
+      var gnbList = $('.nav .gnb>ul>li'),
+          dab = $('.nav .gnb .dab02');
+      gnbList.on('mouseenter', function() {
+        $(this).find(dab).show();
+        $(this).on('mouseleave', function() {
+          $(this).find(dab).hide();
+        })
+      });
+    }
 
+    _this.slickSlide = function() {
+      $('.main-slide').slick({
+        autoplay: true,
+        slidesToShow: 1,
+        dots: true,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: false,
+      });
+      $('.main-slide-pause').on('click',function() {
+        $('.main-slide').slick('slickPause');
+      });
+      // main-slide arrows
+      $('.main-slide .slick-prev').html('<span class="xi-angle-left"></span>')
+      $('.main-slide .slick-next').html('<span class="xi-angle-right"></span>')
 
+      // ad slide
+      $('.ad-slide').slick({
+        autoplay: true,
+        slidesToShow: 1,
+        dots: true,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: false,
+      });
+      // ad-slide arrows
+      $('.ad-slide .slick-prev').html('<span class="xi-angle-left"></span>')
+      $('.ad-slide .slick-next').html('<span class="xi-angle-right"></span>')
+      // ad slide pause
+      $('.ad-slide-pause').on('click',function() {
+        $('.ad-slide').slick('slickPause');
+      });
+    }
+
+    _this.familySite = function() {
+      var familySiteButton = $('.family-site .family-site-title a');
+      var siteList = $('.family-site .site-list');
+      familySiteButton.on('click', function() {
+        $(this).parent().toggleClass('on');
+        if(!$(this).parent().hasClass('on')) {
+          siteList.slideUp(300);
+        } else {
+          siteList.slideDown(300);
+        }
+      });
+    }
 
     _this.init = function() {
         _this.tab();
@@ -137,6 +192,9 @@ function  Common() {
         _this.selectBox();
         _this.globarTab();
         _this.popup();
+        _this.dab();
+        _this.slickSlide();
+        _this.familySite();
     }()
 }
 
